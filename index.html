@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendrier des réservations - Yescapa</title>
+    
+    <!-- FullCalendar 6 (Calendrier) -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js"></script>
+    <!-- ICAL.js (Analyseur de fichier iCal) -->
+    <script src="https://cdn.jsdelivr.net/npm/ical.js@1.5.0/build/ical.min.js"></script>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        h1 {
+            margin-top: 0;
+            color: #2c3e50;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+
+        .control-panel {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 25px;
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #e9ecef;
+        }
+
+        .input-group {
+            display: flex;
+            gap: 10px;
+        }
+
+        input[type="url"] {
+            flex: 1;
+            padding: 12px 15px;
+            border: 1px solid #ced4da;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            outline: none;
+        }
+
+        input[type="url"]:focus {
+            border-color: #3498db;
+        }
+
+        button {
+            padding: 12px 20px;
+            background-color: #ff5a5f; /* Couleur Yescapa / Airbnb */
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        button:hover {
+            background-color: #e0484c;
+        }
+
+        .proxy-toggle {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.85rem;
+            color: #6c757d;
+        }
+
+        #status {
+            margin-bottom: 15px;
+            padding: 10px 15px;
+            border-radius: 6px;
+            display: none;
+            font-size: 0.9rem;
+        }
+
+        #status.info { background-color: #e3f2fd; color: #0d47a1; display: block; }
+        #status.error { background-color: #ffebee; color: #b71c1c; display: block; }
+        #status.success { background-color: #e8f5e9; color: #1b5e20; display: block; }
+
+        #calendar {
+            margin-top: 10px;
+            min-height: 500px;
+        }
+
+        /* Personnalisation des événements du calendrier */
+        .fc-event {
+            border-radius: 4px !important;
+            padding: 2px 4px !important;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Calendrier de Réservation</h1>
+
+    <div class="control-panel">
+        <div class="input-group">
+            <input type="url" id="ical-url" placeholder="Collez l'URL iCal de votre annonce (ex: https://...)" required>
+            <button id="load-btn">Charger</button>
+        </div>
+        <div class="proxy-toggle">
+            <input type="checkbox" id="use-proxy" checked>
+            <label for="use-proxy">Passer par le proxy CORS (Recommandé pour tester sans backend)</label>
+        </div>
+    </div>
+
+    <div id="status"></div>
+    <div id="calendar"></div>
+</div>
+
+<script>
+    let calendar;
+
+    document.addEventListener('DOMContentLoaded', function() {
+        // Initialisation de FullCalendar
+        const calendarEl = document.getElementById('calendar');
+        calendar = new FullCalendar.Calendar(calendarEl, {
+            initialView: 'dayGridMonth',
+            locale: 'fr',
+            headerToolbar: {
+                left: 'prev,next today',
+                center: 'title',
+                right: 'dayGridMonth,listMonth'
+            },
+            buttonText: {
+                today: "Aujourd'hui",
+                month: 'Mois',
+                list: 'Liste'
+            },
+            events: []
+        });
+        calendar.render();
+
+        // Gestion de l'action du bouton
+        document.getElementById('load-btn').addEventListener('click', fetchAndDisplayICal);
+    });
+
+    async function fetchAndDisplayICal() {
+        const urlInput = document.getElementById('ical-url').value.trim();
+        const useProxy = document.getElementById('use-proxy').checked;
+        const statusEl = document.getElementById('status');
+
+        if (!urlInput) {
+            showStatus("Veuillez saisir une URL iCal valide.", "error");
+            return;
+        }
+
+        showStatus("Chargement des données en cours...", "info");
+
+        // Construction de l'URL finale selon l'utilisation du proxy
+        let fetchUrl = urlInput;
+        if (useProxy) {
+            // Utilisation du proxy gratuit corsproxy.io pour contourner le CORS
+            // fetchUrl = 'https://corsproxy.io/?' + encodeURIComponent(urlInput);
+            fetchUrl = 'proxy.php?url=' + encodeURIComponent(urlInput);
+        }
+
+        try {
+            const response = await fetch(fetchUrl);
+            if (!response.ok) {
+                throw new Error(`Erreur réseau HTTP : ${response.status}`);
+            }
+
+            const icalData = await response.text();
+
+            // Analyse du fichier iCal avec ICAL.js
+            const jcalData = ICAL.parse(icalData);
+            const comp = new ICAL.Component(jcalData);
+            const vevents = comp.getAllSubcomponents('vevent');
+
+            // Conversion des événements iCal au format FullCalendar
+            const parsedEvents = vevents.map(vevent => {
+                const event = new ICAL.Event(vevent);
+                return {
+                    title: event.summary || 'Occupé / Réservé',
+                    start: event.startDate.toJSDate(),
+                    end: event.endDate.toJSDate(),
+                    allDay: true,
+                    backgroundColor: '#e74c3c', // Rouge pour les périodes occupées
+                    borderColor: '#c0392b',
+                    textColor: '#ffffff'
+                };
+            });
+
+            // Mise à jour du calendrier
+            calendar.removeAllEvents();
+            calendar.addEventSource(parsedEvents);
+
+            showStatus(`${parsedEvents.length} réservation(s) chargée(s) avec succès !`, "success");
+
+        } catch (error) {
+            console.error(error);
+            showStatus(`Impossible de charger le fichier iCal : ${error.message}`, "error");
+        }
+    }
+
+    function showStatus(message, type) {
+        const statusEl = document.getElementById('status');
+        statusEl.textContent = message;
+        statusEl.className = type;
+    }
+</script>
+
+</body>
+</html>
