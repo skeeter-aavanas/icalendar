@@ -166,37 +166,34 @@
     async function fetchAndDisplayICal() {
         const urlInput = document.getElementById('ical-url').value.trim();
         const useProxy = document.getElementById('use-proxy').checked;
-        const statusEl = document.getElementById('status');
-
+    
         if (!urlInput) {
             showStatus("Veuillez saisir une URL iCal valide.", "error");
             return;
         }
-
+    
         showStatus("Chargement des données en cours...", "info");
-
-        // Construction de l'URL finale selon l'utilisation du proxy
+    
+        // Sur GitHub Pages, on utilise un proxy web direct (pas de PHP)
         let fetchUrl = urlInput;
         if (useProxy) {
-            // Utilisation du proxy gratuit corsproxy.io pour contourner le CORS
-            // fetchUrl = 'https://corsproxy.io/?' + encodeURIComponent(urlInput);
-            fetchUrl = 'proxy.php?url=' + encodeURIComponent(urlInput);
+            fetchUrl = 'https://api.allorigins.win/raw?url=' + encodeURIComponent(urlInput);
         }
-
+    
         try {
             const response = await fetch(fetchUrl);
             if (!response.ok) {
                 throw new Error(`Erreur réseau HTTP : ${response.status}`);
             }
-
+    
             const icalData = await response.text();
-
+    
             // Analyse du fichier iCal avec ICAL.js
             const jcalData = ICAL.parse(icalData);
             const comp = new ICAL.Component(jcalData);
             const vevents = comp.getAllSubcomponents('vevent');
-
-            // Conversion des événements iCal au format FullCalendar
+    
+            // Conversion pour FullCalendar
             const parsedEvents = vevents.map(vevent => {
                 const event = new ICAL.Event(vevent);
                 return {
@@ -204,18 +201,17 @@
                     start: event.startDate.toJSDate(),
                     end: event.endDate.toJSDate(),
                     allDay: true,
-                    backgroundColor: '#e74c3c', // Rouge pour les périodes occupées
+                    backgroundColor: '#e74c3c',
                     borderColor: '#c0392b',
                     textColor: '#ffffff'
                 };
             });
-
-            // Mise à jour du calendrier
+    
             calendar.removeAllEvents();
             calendar.addEventSource(parsedEvents);
-
+    
             showStatus(`${parsedEvents.length} réservation(s) chargée(s) avec succès !`, "success");
-
+    
         } catch (error) {
             console.error(error);
             showStatus(`Impossible de charger le fichier iCal : ${error.message}`, "error");
