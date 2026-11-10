@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Catalogue VDL Europe</title>
+  <meta name="description" content="Catalogue des véhicules de loisirs vendus en Europe : camping-cars, fourgons aménagés, vans et caravanes. Caractéristiques, comparateur et estimation neuf / occasion.">
+  <link rel="stylesheet" href="assets/app.css">
+</head>
+<body>
+  <header class="site"></header>
+  <main class="wrap">
+    <h1>Véhicules de loisirs en Europe</h1>
+    <p class="note" id="summary">Chargement…</p>
+    <div class="layout">
+      <form class="filters card" id="filters" autocomplete="off">
+        <details open id="filters-box">
+          <summary>Filtres <span class="count" id="active-count"></span></summary>
+          <div class="f"><label for="q">Recherche</label><input id="q" name="q" type="search" placeholder="Marque, modèle, gamme…"></div>
+          <div class="f"><label>Type</label><div class="chips" id="types"></div></div>
+          <div class="f"><label for="brand">Marque</label><select id="brand" name="brand"><option value="">Toutes</option></select></div>
+          <div class="f"><label for="chassis">Porteur</label><select id="chassis" name="chassis"><option value="">Tous</option></select></div>
+          <div class="f row2">
+            <div><label for="lmin">Longueur min (m)</label><input id="lmin" name="lmin" type="number" step="0.1" min="3" max="12"></div>
+            <div><label for="lmax">Longueur max (m)</label><input id="lmax" name="lmax" type="number" step="0.1" min="3" max="12"></div>
+          </div>
+          <div class="f row2">
+            <div><label for="pmin">Prix neuf min (€)</label><input id="pmin" name="pmin" type="number" step="1000" min="0"></div>
+            <div><label for="pmax">Prix neuf max (€)</label><input id="pmax" name="pmax" type="number" step="1000" min="0"></div>
+          </div>
+          <div class="f row2">
+            <div><label for="travel">Places carte grise ≥</label><input id="travel" name="travel" type="number" min="1" max="9"></div>
+            <div><label for="sleep">Couchages ≥</label><input id="sleep" name="sleep" type="number" min="1" max="9"></div>
+          </div>
+          <div class="f chips"><label><input type="checkbox" name="ptac35" value="1"> PTAC ≤ 3,5 t (permis B)</label></div>
+          <div class="f"><label for="heat">Énergie du chauffage</label><select id="heat" name="heat"><option value="">Indifférent</option></select></div>
+          <div class="f"><label for="fridge">Type de réfrigérateur</label><select id="fridge" name="fridge"><option value="">Indifférent</option></select></div>
+          <div class="f"><label for="bed">Type de couchage</label><select id="bed" name="bed"><option value="">Indifférent</option></select></div>
+          <div class="f chips">
+            <label><input type="checkbox" name="hotwater" value="1"> Eau chaude</label>
+            <label><input type="checkbox" name="poptop" value="1"> Toit relevable</label>
+          </div>
+          <p class="note">Les véhicules dont l'information est « N/D » sont exclus quand le filtre porte sur cette information.</p>
+          <div class="f"><button type="reset" id="reset">Réinitialiser</button></div>
+        </details>
+      </form>
+      <section aria-live="polite">
+        <div class="toolbar">
+          <strong id="result-count"></strong>
+          <label style="display:flex;gap:8px;align-items:center;margin:0">Trier par
+            <select id="sort">
+              <option value="name">Marque / modèle</option>
+              <option value="price-asc">Prix croissant</option>
+              <option value="price-desc">Prix décroissant</option>
+              <option value="length-asc">Longueur croissante</option>
+              <option value="length-desc">Longueur décroissante</option>
+              <option value="sleep-desc">Couchages</option>
+            </select>
+          </label>
+        </div>
+        <div class="grid" id="results"></div>
+        <nav class="pager" id="pager" aria-label="Pagination"></nav>
+      </section>
+    </div>
+  </main>
+  <div class="cmpbar" id="cmpbar" hidden>
+    <div class="names" id="cmp-names"></div>
+    <button type="button" id="cmp-clear">Vider</button>
+    <a class="btn primary" href="comparer.html" id="cmp-go">Comparer</a>
+  </div>
+  <footer class="site"></footer>
+  <script type="module" src="assets/app.js"></script>
+</body>
+</html>

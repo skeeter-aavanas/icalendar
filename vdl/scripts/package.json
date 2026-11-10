@@ -1,0 +1,16 @@
+{
+  "name": "vdl-data-scripts",
+  "private": true,
+  "type": "module",
+  "description": "Collecte hors-ligne des caractéristiques des VDL et génération des JSON du site",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "scrape": "node scrape.js",
+    "build": "node build-data.js",
+    "test": "node --test test/*.test.js"
+  },
+  "dependencies": {
+    "cheerio": "1.0.0",
+    "pdf-parse": "1.1.1"
+  }
+}

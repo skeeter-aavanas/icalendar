@@ -1,0 +1,566 @@
+{
+  "_comment": "Données de départ saisies à la main à partir des catalogues publics des constructeurs. Valeurs APPROXIMATIVES (data_quality=seed) : à vérifier sur la fiche constructeur avant tout usage. Champ absent = N/D ; \"na\" = non applicable.",
+  "models": [
+    {
+      "id": "vw-california-ocean-2025", "brand": "volkswagen", "range": "California", "model": "Ocean", "year": 2025, "type": "van",
+      "chassis": "vw-multivan-t7", "engine": { "power_ch": 150, "fuel": "diesel", "gearbox": "auto" },
+      "dimensions": { "length_cm": 517, "width_cm": 194, "height_cm": 199, "wheelbase_cm": 312 },
+      "weights": { "ptac_kg": 3000 },
+      "seats": { "travel": 4 },
+      "beds": [{ "type": "toit", "count": 2, "dimensions": "200 × 120 cm" }, { "type": "banquette", "count": 2, "dimensions": "195 × 114 cm" }],
+      "layout": "Kitchenette latérale, banquette coulissante",
+      "tanks": { "fresh_l": 28, "grey_l": 28 },
+      "equipment": {
+        "heating": { "energy": "gazole", "system": "air", "model": "Chauffage stationnaire à air" },
+        "fridge": { "type": "compresseur", "volume_l": 42, "freezer": false },
+        "hot_water": { "present": false },
+        "roof": { "pop_top": true, "skylights": 0, "panoramic": true, "cab_skylight": false }
+      },
+      "price_new_eur": 78000, "specs_source_url": "https://www.volkswagen-utilitaires.fr", "price_source_url": "https://www.volkswagen-utilitaires.fr"
+    },
+    {
+      "id": "mercedes-marco-polo-250d-2025", "brand": "mercedes", "range": "Marco Polo", "model": "250 d", "year": 2025, "type": "van",
+      "chassis": "mercedes-classe-v", "engine": { "power_ch": 190, "fuel": "diesel", "gearbox": "auto" },
+      "dimensions": { "length_cm": 514, "width_cm": 193, "height_cm": 198, "wheelbase_cm": 320 },
+      "weights": { "ptac_kg": 3200 },
+      "seats": { "travel": 4 },
+      "beds": [{ "type": "toit", "count": 2, "dimensions": "205 × 113 cm" }, { "type": "banquette", "count": 2, "dimensions": "193 × 113 cm" }],
+      "layout": "Kitchenette latérale",
+      "tanks": { "fresh_l": 38, "grey_l": 40 },
+      "equipment": {
+        "heating": { "energy": "gazole", "system": "air" },
+        "fridge": { "type": "compresseur", "volume_l": 40, "freezer": false },
+        "hot_water": { "present": false },
+        "roof": { "pop_top": true, "skylights": 0, "panoramic": false, "cab_skylight": false }
+      },
+      "price_new_eur": 85000, "specs_source_url": "https://www.mercedes-benz.fr", "price_source_url": "https://www.mercedes-benz.fr"
+    },
+    {
+      "id": "ford-nugget-2025", "brand": "ford", "range": "Transit Custom Nugget", "model": "Nugget", "year": 2025, "type": "van",
+      "chassis": "ford-transit-custom", "engine": { "power_ch": 150, "fuel": "diesel", "gearbox": "auto" },
+      "dimensions": { "length_cm": 505, "width_cm": 199, "height_cm": 205, "wheelbase_cm": 310 },
+      "weights": { "ptac_kg": 3200 },
+      "seats": { "travel": 4 },
+      "beds": [{ "type": "toit", "count": 2 }, { "type": "banquette", "count": 2 }],
+      "layout": "Cuisine arrière en L",
+      "tanks": { "fresh_l": 42, "grey_l": 40 },
+      "equipment": {
+        "heating": { "energy": "gazole", "system": "air" },
+        "fridge": { "type": "compresseur", "volume_l": 40 },
+        "hot_water": { "present": true, "source": "boiler" },
+        "roof": { "pop_top": true, "skylights": 0, "panoramic": false, "cab_skylight": false }
+      },
+      "price_new_eur": 76000, "specs_source_url": "https://www.ford.fr", "price_source_url": "https://www.ford.fr"
+    },
+    {
+      "id": "possl-campster-2025", "brand": "possl", "range": "Campster", "model": "Campster", "year": 2025, "type": "van",
+      "chassis": "citroen-spacetourer", "engine": { "power_ch": 145, "fuel": "diesel", "gearbox": "manuelle" },
+      "dimensions": { "length_cm": 495, "width_cm": 192, "height_cm": 199, "wheelbase_cm": 327 },
+      "weights": { "ptac_kg": 3100 },
+      "seats": { "travel": 4 },
+      "beds": [{ "type": "toit", "count": 2, "dimensions": "200 × 122 cm" }, { "type": "banquette", "count": 2, "dimensions": "190 × 128 cm" }],
+      "layout": "Kitchenette latérale",
+      "equipment": {
+        "heating": { "energy": "gazole", "system": "air" },
+        "fridge": { "type": "compresseur", "volume_l": 40, "freezer": false },
+        "hot_water": { "present": false },
+        "roof": { "pop_top": true, "skylights": 0, "panoramic": false, "cab_skylight": false }
+      },
+      "price_new_eur": 50000, "specs_source_url": "https://www.poessl-mobile.de", "price_source_url": "https://www.poessl-mobile.de"
+    },
+    {
+      "id": "possl-summit-600-2025", "brand": "possl", "range": "Summit", "model": "600", "year": 2025, "type": "fourgon",
+      "chassis": "citroen-jumper", "engine": { "power_ch": 140, "fuel": "diesel", "gearbox": "manuelle" },
+      "dimensions": { "length_cm": 599, "width_cm": 205, "height_cm": 264, "wheelbase_cm": 404 },
+      "weights": { "ptac_kg": 3500, "empty_kg": 2900, "payload_kg": 600 },
+      "seats": { "travel": 4 },
+      "beds": [{ "type": "transversal", "count": 2, "dimensions": "193 × 140 cm" }],
+      "layout": "Lit transversal arrière, dînette face à la route",
+      "tanks": { "fresh_l": 100, "grey_l": 92 },
+      "equipment": {
+        "heating": { "energy": "gaz", "system": "combi", "model": "Truma Combi 4" },
+        "fridge": { "type": "compresseur", "volume_l": 84, "freezer": true },
+        "hot_water": { "present": true, "source": "combi", "volume_l": 10 },
+        "roof": { "pop_top": false, "skylights": 2, "skylight_types": "Mini-Heki + lanterneau", "panoramic": false, "cab_skylight": false }
+      },
+      "price_new_eur": 52000, "specs_source_url": "https://www.poessl-mobile.de", "price_source_url": "https://www.poessl-mobile.de"
+    },
+    {
+      "id": "adria-twin-supreme-640-slb-2025", "brand": "adria", "range": "Twin Supreme", "model": "640 SLB", "year": 2025, "type": "fourgon",
+      "chassis": "fiat-ducato", "engine": { "power_ch": 140, "fuel": "diesel", "gearbox": "manuelle" },
+      "dimensions": { "length_cm": 636, "width_cm": 205, "height_cm": 264, "wheelbase_cm": 404 },
+      "weights": { "ptac_kg": 3500, "empty_kg": 3000, "payload_kg": 500 },
+      "seats": { "travel": 4 },
+      "beds": [{ "type": "jumeaux", "count": 2, "dimensions": "190 × 80 cm" }],
+      "layout": "Lits jumeaux arrière, salle d'eau centrale",
+      "tanks": { "fresh_l": 100, "grey_l": 90 },
+      "equipment": {
+        "heating": { "energy": "gaz", "system": "combi", "model": "Truma Combi 6" },
+        "fridge": { "type": "compresseur", "volume_l": 90, "freezer": true },
+        "hot_water": { "present": true, "source": "combi", "volume_l": 10 },
+        "roof": { "pop_top": false, "skylights": 3, "skylight_types": "Skyroof + Mini-Heki", "panoramic": true, "cab_skylight": false }
+      },
+      "price_new_eur": 72000, "specs_source_url": "https://www.adria-mobil.com", "price_source_url": "https://www.adria-mobil.com"
+    },
+    {
+      "id": "font-vendome-leader-van-2025", "brand": "font-vendome", "range": "Leader Van", "model": "Leader Van", "year": 2025, "type": "fourgon",
+      "chassis": "fiat-ducato", "engine": { "power_ch": 140, "fuel": "diesel", "gearbox": "manuelle" },
+      "dimensions": { "length_cm": 599, "width_cm": 205, "height_cm": 258, "wheelbase_cm": 404 },
+      "weights": { "ptac_kg": 3500 },
+      "seats": { "travel": 4 },
+      "beds": [{ "type": "jumeaux", "count": 2 }],
+      "layout": "Lits jumeaux arrière",
+      "tanks": { "fresh_l": 100, "grey_l": 85 },
+      "equipment": {
+        "heating": { "energy": "gaz", "system": "combi", "model": "Truma Combi 4" },
+        "fridge": { "type": "compresseur", "volume_l": 84 },
+        "hot_water": { "present": true, "source": "combi" },
+        "roof": { "pop_top": false, "skylights": 2, "panoramic": false, "cab_skylight": false }
+      },
+      "price_new_eur": 59000, "specs_source_url": "https://www.font-vendome.com", "price_source_url": "https://www.font-vendome.com"
+    },
+    {
+      "id": "hymer-grand-canyon-s-600-2025", "brand": "hymer", "range": "Grand Canyon S", "model": "600", "year": 2025, "type": "fourgon",
+      "chassis": "mercedes-sprinter", "engine": { "power_ch": 170, "fuel": "diesel", "gearbox": "auto" },
+      "dimensions": { "length_cm": 593, "width_cm": 202, "height_cm": 285, "wheelbase_cm": 366 },
+      "weights": { "ptac_kg": 3880 },
+      "seats": { "travel": 4 },
+      "beds": [{ "type": "transversal", "count": 2, "dimensions": "195 × 140 cm" }, { "type": "toit", "count": 2 }],
+      "layout": "Lit transversal arrière, toit relevable",
+      "tanks": { "fresh_l": 100, "grey_l": 90 },
+      "equipment": {
+        "heating": { "energy": "gazole", "system": "combi", "model": "Truma Combi D 6" },
+        "fridge": { "type": "compresseur", "volume_l": 70 },
+        "hot_water": { "present": true, "source": "combi", "volume_l": 10 },
+        "roof": { "pop_top": true, "skylights": 1, "panoramic": false, "cab_skylight": false }
+      },
+      "price_new_eur": 98000, "specs_source_url": "https://www.hymer.com", "price_source_url": "https://www.hymer.com"
+    },
+    {
+      "id": "westfalia-columbus-600d-2025", "brand": "westfalia", "range": "Columbus", "model": "600 D", "year": 2025, "type": "fourgon",
+      "chassis": "citroen-jumper", "engine": { "power_ch": 140, "fuel": "diesel", "gearbox": "manuelle" },
+      "dimensions": { "length_cm": 599, "width_cm": 205, "height_cm": 265, "wheelbase_cm": 404 },
+      "weights": { "ptac_kg": 3500 },
+      "seats": { "travel": 4 },
+      "beds": [{ "type": "transversal", "count": 2 }],
+      "layout": "Lit transversal arrière",
+      "equipment": {
+        "heating": { "energy": "gazole", "system": "air" },
+        "fridge": { "type": "compresseur", "volume_l": 90 },
+        "hot_water": { "present": true, "source": "boiler" },
+        "roof": { "pop_top": false, "skylights": 2, "panoramic": false, "cab_skylight": false }
+      },
+      "price_new_eur": 62000, "specs_source_url": "https://www.westfalia-mobil.net", "price_source_url": "https://www.westfalia-mobil.net"
+    },
+    {
+      "id": "malibu-van-600-db-2025", "brand": "malibu", "range": "Van compact", "model": "600 DB", "year": 2025, "type": "fourgon",
+      "chassis": "fiat-ducato", "engine": { "power_ch": 140, "fuel": "diesel", "gearbox": "manuelle" },
+      "dimensions": { "length_cm": 599, "width_cm": 205, "height_cm": 268, "wheelbase_cm": 404 },
+      "weights": { "ptac_kg": 3500 },
+      "seats": { "travel": 4 },
+      "beds": [{ "type": "transversal", "count": 2 }],
+      "layout": "Lit transversal arrière",
+      "tanks": { "fresh_l": 100, "grey_l": 90 },
+      "equipment": {
+        "heating": { "energy": "gaz", "system": "combi", "model": "Truma Combi 4" },
+        "fridge": { "type": "compresseur", "volume_l": 84 },
+        "hot_water": { "present": true, "source": "combi", "volume_l": 10 },
+        "roof": { "pop_top": false, "skylights": 2, "panoramic": false, "cab_skylight": false }
+      },
+      "price_new_eur": 63000, "specs_source_url": "https://www.malibu-vans.com", "price_source_url": "https://www.malibu-vans.com"
+    },
+    {
+      "id": "knaus-boxstar-600-street-2025", "brand": "knaus", "range": "BoxStar", "model": "600 Street", "year": 2025, "type": "fourgon",
+      "chassis": "fiat-ducato", "engine": { "power_ch": 140, "fuel": "diesel", "gearbox": "manuelle" },
+      "dimensions": { "length_cm": 599, "width_cm": 205, "height_cm": 260, "wheelbase_cm": 404 },
+      "weights": { "ptac_kg": 3500 },
+      "seats": { "travel": 4 },
+      "beds": [{ "type": "transversal", "count": 2 }],
+      "layout": "Lit transversal arrière",
+      "equipment": {
+        "heating": { "energy": "gaz", "system": "combi", "model": "Truma Combi 4" },
+        "fridge": { "type": "compresseur", "volume_l": 90 },
+        "hot_water": { "present": true, "source": "combi" },
+        "roof": { "pop_top": false, "skylights": 2, "panoramic": false, "cab_skylight": false }
+      },
+      "price_new_eur": 58000, "specs_source_url": "https://www.knaus.com", "price_source_url": "https://www.knaus.com"
+    },
+    {
+      "id": "carado-cv600-2025", "brand": "carado", "range": "Camper Van", "model": "CV 600", "year": 2025, "type": "fourgon",
+      "chassis": "fiat-ducato", "engine": { "power_ch": 120, "fuel": "diesel", "gearbox": "manuelle" },
+      "dimensions": { "length_cm": 599, "width_cm": 205, "height_cm": 258, "wheelbase_cm": 404 },
+      "weights": { "ptac_kg": 3500 },
+      "seats": { "travel": 4 },
+      "beds": [{ "type": "transversal", "count": 2 }],
+      "layout": "Lit transversal arrière",
+      "equipment": {
+        "heating": { "energy": "gaz", "system": "combi", "model": "Truma Combi 4" },
+        "fridge": { "type": "compresseur" },
+        "hot_water": { "present": true, "source": "combi" }
+      },
+      "price_new_eur": 51000, "specs_source_url": "https://www.carado.de", "price_source_url": "https://www.carado.de"
+    },
+    {
+      "id": "chausson-720-titanium-ultimate-2025", "brand": "chausson", "range": "Titanium Ultimate", "model": "720", "year": 2025, "type": "profile",
+      "chassis": "ford-transit", "engine": { "power_ch": 170, "fuel": "diesel", "gearbox": "auto" },
+      "dimensions": { "length_cm": 744, "width_cm": 235, "height_cm": 295 },
+      "weights": { "ptac_kg": 3500 },
+      "seats": { "travel": 4 },
+      "beds": [{ "type": "central", "count": 2, "dimensions": "195 × 140 cm" }, { "type": "pavillon", "count": 2 }],
+      "layout": "Lit central arrière, salon face à face",
+      "tanks": { "fresh_l": 140, "grey_l": 120 },
+      "equipment": {
+        "heating": { "energy": "gaz", "system": "combi", "model": "Truma Combi 6" },
+        "fridge": { "type": "absorption", "volume_l": 142, "freezer": true },
+        "hot_water": { "present": true, "source": "combi", "volume_l": 10 },
+        "roof": { "skylights": 3, "panoramic": true, "cab_skylight": true }
+      },
+      "price_new_eur": 78000, "specs_source_url": "https://www.chausson-camping-cars.fr", "price_source_url": "https://www.chausson-camping-cars.fr"
+    },
+    {
+      "id": "challenger-graphite-260-2025", "brand": "challenger", "range": "Graphite", "model": "260", "year": 2025, "type": "profile",
+      "chassis": "ford-transit", "engine": { "power_ch": 130, "fuel": "diesel", "gearbox": "manuelle" },
+      "dimensions": { "length_cm": 699, "width_cm": 235, "height_cm": 290 },
+      "weights": { "ptac_kg": 3500 },
+      "seats": { "travel": 4 },
+      "beds": [{ "type": "jumeaux", "count": 2 }, { "type": "pavillon", "count": 2 }],
+      "layout": "Lits jumeaux arrière",
+      "equipment": {
+        "heating": { "energy": "gaz", "system": "combi", "model": "Truma Combi 4" },
+        "fridge": { "type": "absorption", "volume_l": 142 },
+        "hot_water": { "present": true, "source": "combi" },
+        "roof": { "skylights": 3, "panoramic": true, "cab_skylight": true }
+      },
+      "price_new_eur": 68000, "specs_source_url": "https://www.challenger-camping-cars.fr", "price_source_url": "https://www.challenger-camping-cars.fr"
+    },
+    {
+      "id": "rapido-m66-2025", "brand": "rapido", "range": "Série M", "model": "M66", "year": 2025, "type": "profile",
+      "chassis": "fiat-ducato", "engine": { "power_ch": 140, "fuel": "diesel", "gearbox": "manuelle" },
+      "dimensions": { "length_cm": 699, "width_cm": 230, "height_cm": 285 },
+      "weights": { "ptac_kg": 3500 },
+      "seats": { "travel": 4 },
+      "beds": [{ "type": "jumeaux", "count": 2 }, { "type": "pavillon", "count": 2 }],
+      "layout": "Lits jumeaux arrière, salon face à face",
+      "tanks": { "fresh_l": 125, "grey_l": 110 },
+      "equipment": {
+        "heating": { "energy": "gaz", "system": "combi", "model": "Truma Combi 6" },
+        "fridge": { "type": "absorption", "volume_l": 150 },
+        "hot_water": { "present": true, "source": "combi", "volume_l": 10 },
+        "roof": { "skylights": 3, "panoramic": true, "cab_skylight": true }
+      },
+      "price_new_eur": 79000, "specs_source_url": "https://www.rapido-camping-car.fr", "price_source_url": "https://www.rapido-camping-car.fr"
+    },
+    {
+      "id": "burstner-lyseo-td-736-2025", "brand": "burstner", "range": "Lyseo TD", "model": "736 Harmony Line", "year": 2025, "type": "profile",
+      "chassis": "fiat-ducato", "engine": { "power_ch": 140, "fuel": "diesel", "gearbox": "manuelle" },
+      "dimensions": { "length_cm": 741, "width_cm": 232, "height_cm": 294 },
+      "weights": { "ptac_kg": 3500 },
+      "seats": { "travel": 4 },
+      "beds": [{ "type": "jumeaux", "count": 2 }, { "type": "pavillon", "count": 2 }],
+      "layout": "Lits jumeaux arrière",
+      "tanks": { "fresh_l": 120, "grey_l": 92 },
+      "equipment": {
+        "heating": { "energy": "gaz", "system": "combi", "model": "Truma Combi 6" },
+        "fridge": { "type": "absorption", "volume_l": 142 },
+        "hot_water": { "present": true, "source": "combi" },
+        "roof": { "skylights": 3, "panoramic": true, "cab_skylight": true }
+      },
+      "price_new_eur": 86000, "specs_source_url": "https://www.buerstner.com", "price_source_url": "https://www.buerstner.com"
+    },
+    {
+      "id": "hymer-exsis-t-580-2025", "brand": "hymer", "range": "Exsis-t", "model": "580", "year": 2025, "type": "profile",
+      "chassis": "fiat-ducato", "engine": { "power_ch": 140, "fuel": "diesel", "gearbox": "manuelle" },
+      "dimensions": { "length_cm": 699, "width_cm": 222, "height_cm": 285 },
+      "weights": { "ptac_kg": 3500 },
+      "seats": { "travel": 4 },
+      "beds": [{ "type": "jumeaux", "count": 2 }, { "type": "pavillon", "count": 2 }],
+      "layout": "Lits jumeaux arrière",
+      "equipment": {
+        "heating": { "energy": "gaz", "system": "combi", "model": "Truma Combi 6" },
+        "fridge": { "type": "absorption" },
+        "hot_water": { "present": true, "source": "combi" },
+        "roof": { "panoramic": true, "cab_skylight": true }
+      },
+      "price_new_eur": 92000, "specs_source_url": "https://www.hymer.com", "price_source_url": "https://www.hymer.com"
+    },
+    {
+      "id": "pilote-pacific-p696u-2025", "brand": "pilote", "range": "Pacific", "model": "P696U", "year": 2025, "type": "profile",
+      "chassis": "fiat-ducato", "engine": { "power_ch": 140, "fuel": "diesel", "gearbox": "manuelle" },
+      "dimensions": { "length_cm": 699, "width_cm": 230, "height_cm": 290 },
+      "weights": { "ptac_kg": 3500 },
+      "seats": { "travel": 4 },
+      "beds": [{ "type": "jumeaux", "count": 2 }, { "type": "pavillon", "count": 2 }],
+      "layout": "Lits jumeaux arrière, salon en U",
+      "equipment": {
+        "heating": { "energy": "gaz", "system": "combi", "model": "Truma Combi 6" },
+        "fridge": { "type": "absorption", "volume_l": 142 },
+        "hot_water": { "present": true, "source": "combi" },
+        "roof": { "skylights": 3, "panoramic": true, "cab_skylight": true }
+      },
+      "price_new_eur": 82000, "specs_source_url": "https://www.pilote.fr", "price_source_url": "https://www.pilote.fr"
+    },
+    {
+      "id": "benimar-tessoro-482-2025", "brand": "benimar", "range": "Tessoro", "model": "482", "year": 2025, "type": "profile",
+      "chassis": "ford-transit", "engine": { "power_ch": 130, "fuel": "diesel", "gearbox": "manuelle" },
+      "dimensions": { "length_cm": 699, "width_cm": 235, "height_cm": 289 },
+      "weights": { "ptac_kg": 3500 },
+      "seats": { "travel": 4 },
+      "beds": [{ "type": "central", "count": 2 }, { "type": "pavillon", "count": 2 }],
+      "layout": "Lit central arrière",
+      "equipment": {
+        "heating": { "energy": "gaz", "system": "combi", "model": "Truma Combi 4" },
+        "fridge": { "type": "absorption", "volume_l": 142 },
+        "hot_water": { "present": true, "source": "combi" },
+        "roof": { "panoramic": true, "cab_skylight": true }
+      },
+      "price_new_eur": 64000, "specs_source_url": "https://www.benimar.es", "price_source_url": "https://www.benimar.es"
+    },
+    {
+      "id": "dethleffs-just-go-t7052eb-2025", "brand": "dethleffs", "range": "Just Go", "model": "T 7052 EB", "year": 2025, "type": "profile",
+      "chassis": "fiat-ducato", "engine": { "power_ch": 140, "fuel": "diesel", "gearbox": "manuelle" },
+      "dimensions": { "length_cm": 741, "width_cm": 233, "height_cm": 294 },
+      "weights": { "ptac_kg": 3500 },
+      "seats": { "travel": 4 },
+      "beds": [{ "type": "jumeaux", "count": 2 }, { "type": "dinette", "count": 1 }],
+      "layout": "Lits jumeaux arrière",
+      "equipment": {
+        "heating": { "energy": "gaz", "system": "combi", "model": "Truma Combi 4" },
+        "fridge": { "type": "absorption" },
+        "hot_water": { "present": true, "source": "combi" }
+      },
+      "price_new_eur": 66000, "specs_source_url": "https://www.dethleffs.fr", "price_source_url": "https://www.dethleffs.fr"
+    },
+    {
+      "id": "knaus-van-ti-650-meg-2025", "brand": "knaus", "range": "Van TI", "model": "650 MEG Vansation", "year": 2025, "type": "profile",
+      "chassis": "fiat-ducato", "engine": { "power_ch": 140, "fuel": "diesel", "gearbox": "manuelle" },
+      "dimensions": { "length_cm": 696, "width_cm": 220, "height_cm": 279 },
+      "weights": { "ptac_kg": 3500 },
+      "seats": { "travel": 4 },
+      "beds": [{ "type": "jumeaux", "count": 2 }, { "type": "dinette", "count": 1 }],
+      "layout": "Lits jumeaux arrière, profilé étroit",
+      "equipment": {
+        "heating": { "energy": "gaz", "system": "combi", "model": "Truma Combi 4" },
+        "fridge": { "type": "compresseur" },
+        "hot_water": { "present": true, "source": "combi" },
+        "roof": { "panoramic": true, "cab_skylight": true }
+      },
+      "price_new_eur": 81000, "specs_source_url": "https://www.knaus.com", "price_source_url": "https://www.knaus.com"
+    },
+    {
+      "id": "lmc-tourer-lift-h730g-2025", "brand": "lmc", "range": "Tourer Lift", "model": "H 730 G", "year": 2025, "type": "profile",
+      "chassis": "fiat-ducato", "engine": { "power_ch": 140, "fuel": "diesel", "gearbox": "manuelle" },
+      "dimensions": { "length_cm": 741, "width_cm": 234, "height_cm": 290 },
+      "weights": { "ptac_kg": 3500 },
+      "seats": { "travel": 4 },
+      "beds": [{ "type": "superposes", "count": 2 }, { "type": "pavillon", "count": 2 }],
+      "layout": "Garage arrière, lit de pavillon",
+      "equipment": {
+        "heating": { "energy": "gaz", "system": "combi", "model": "Truma Combi 6" },
+        "fridge": { "type": "absorption" },
+        "hot_water": { "present": true, "source": "combi" }
+      },
+      "price_new_eur": 74000, "specs_source_url": "https://www.lmc-caravan.com", "price_source_url": "https://www.lmc-caravan.com"
+    },
+    {
+      "id": "eura-mobil-profila-t-676-eb-2025", "brand": "eura-mobil", "range": "Profila T", "model": "676 EB", "year": 2025, "type": "profile",
+      "chassis": "fiat-ducato", "engine": { "power_ch": 140, "fuel": "diesel", "gearbox": "manuelle" },
+      "dimensions": { "length_cm": 699, "width_cm": 232, "height_cm": 294 },
+      "weights": { "ptac_kg": 3500 },
+      "seats": { "travel": 4 },
+      "beds": [{ "type": "jumeaux", "count": 2 }],
+      "layout": "Lits jumeaux arrière",
+      "equipment": {
+        "heating": { "energy": "gaz", "system": "combi", "model": "Truma Combi 6" },
+        "fridge": { "type": "absorption" },
+        "hot_water": { "present": true, "source": "combi" }
+      },
+      "price_new_eur": 88000, "specs_source_url": "https://www.euramobil.de", "price_source_url": "https://www.euramobil.de"
+    },
+    {
+      "id": "hymer-b-class-masterline-i780-2025", "brand": "hymer", "range": "B-Class MasterLine", "model": "I 780", "year": 2025, "type": "integral",
+      "chassis": "mercedes-sprinter", "engine": { "power_ch": 170, "fuel": "diesel", "gearbox": "auto" },
+      "dimensions": { "length_cm": 787, "width_cm": 236, "height_cm": 296 },
+      "weights": { "ptac_kg": 4430 },
+      "seats": { "travel": 4 },
+      "beds": [{ "type": "jumeaux", "count": 2 }, { "type": "pavillon", "count": 2 }],
+      "layout": "Lits jumeaux arrière, pavillon avant",
+      "tanks": { "fresh_l": 150, "grey_l": 140 },
+      "equipment": {
+        "heating": { "energy": "gaz", "system": "eau", "model": "Alde (chauffage central)" },
+        "fridge": { "type": "compresseur", "volume_l": 177, "freezer": true },
+        "hot_water": { "present": true, "source": "combi" },
+        "roof": { "skylights": 3, "panoramic": false, "cab_skylight": true }
+      },
+      "price_new_eur": 155000, "specs_source_url": "https://www.hymer.com", "price_source_url": "https://www.hymer.com"
+    },
+    {
+      "id": "rapido-8096df-2025", "brand": "rapido", "range": "Série 80dF", "model": "8096dF", "year": 2025, "type": "integral",
+      "chassis": "fiat-ducato", "engine": { "power_ch": 160, "fuel": "diesel", "gearbox": "auto" },
+      "dimensions": { "length_cm": 744, "width_cm": 235, "height_cm": 290 },
+      "weights": { "ptac_kg": 3500 },
+      "seats": { "travel": 4 },
+      "beds": [{ "type": "central", "count": 2 }, { "type": "pavillon", "count": 2 }],
+      "layout": "Lit central arrière, pavillon avant",
+      "equipment": {
+        "heating": { "energy": "gaz", "system": "combi", "model": "Truma Combi 6" },
+        "fridge": { "type": "absorption", "volume_l": 150 },
+        "hot_water": { "present": true, "source": "combi" },
+        "roof": { "skylights": 3, "panoramic": false, "cab_skylight": true }
+      },
+      "price_new_eur": 108000, "specs_source_url": "https://www.rapido-camping-car.fr", "price_source_url": "https://www.rapido-camping-car.fr"
+    },
+    {
+      "id": "carthago-chic-c-line-i49le-2025", "brand": "carthago", "range": "Chic C-Line I", "model": "4.9 LE", "year": 2025, "type": "integral",
+      "chassis": "fiat-ducato", "engine": { "power_ch": 180, "fuel": "diesel", "gearbox": "auto" },
+      "dimensions": { "length_cm": 784, "width_cm": 227, "height_cm": 295 },
+      "weights": { "ptac_kg": 4500 },
+      "seats": { "travel": 4 },
+      "beds": [{ "type": "jumeaux", "count": 2 }, { "type": "pavillon", "count": 2 }],
+      "layout": "Lits jumeaux arrière",
+      "equipment": {
+        "heating": { "energy": "gaz", "system": "eau", "model": "Alde (chauffage central)" },
+        "fridge": { "type": "absorption", "freezer": true },
+        "hot_water": { "present": true, "source": "combi" },
+        "roof": { "cab_skylight": true }
+      },
+      "price_new_eur": 145000, "specs_source_url": "https://www.carthago.com", "price_source_url": "https://www.carthago.com"
+    },
+    {
+      "id": "frankia-i-7400-gd-2025", "brand": "frankia", "range": "Titan / I", "model": "I 7400 GD", "year": 2025, "type": "integral",
+      "chassis": "fiat-ducato", "engine": { "power_ch": 180, "fuel": "diesel", "gearbox": "auto" },
+      "dimensions": { "length_cm": 749, "width_cm": 235 },
+      "seats": { "travel": 4 },
+      "beds": [{ "type": "jumeaux", "count": 2 }, { "type": "pavillon", "count": 2 }],
+      "equipment": {
+        "heating": { "energy": "gaz", "system": "eau", "model": "Alde (chauffage central)" },
+        "hot_water": { "present": true, "source": "combi" }
+      },
+      "price_new_eur": 160000, "specs_source_url": "https://www.frankia.com", "price_source_url": "https://www.frankia.com"
+    },
+    {
+      "id": "sunlight-a70-2025", "brand": "sunlight", "range": "A", "model": "70", "year": 2025, "type": "capucine",
+      "chassis": "fiat-ducato", "engine": { "power_ch": 140, "fuel": "diesel", "gearbox": "manuelle" },
+      "dimensions": { "length_cm": 699, "width_cm": 234, "height_cm": 316 },
+      "weights": { "ptac_kg": 3500 },
+      "seats": { "travel": 6 },
+      "beds": [{ "type": "capucine", "count": 2, "dimensions": "210 × 160 cm" }, { "type": "superposes", "count": 2 }, { "type": "dinette", "count": 2 }],
+      "layout": "Capucine, lits superposés arrière",
+      "equipment": {
+        "heating": { "energy": "gaz", "system": "combi", "model": "Truma Combi 6" },
+        "fridge": { "type": "absorption", "volume_l": 142 },
+        "hot_water": { "present": true, "source": "combi" },
+        "roof": { "skylights": 2 }
+      },
+      "price_new_eur": 62000, "specs_source_url": "https://www.sunlight.de", "price_source_url": "https://www.sunlight.de"
+    },
+    {
+      "id": "ahorn-camp-a680-plus-2025", "brand": "ahorn", "range": "A", "model": "680 Plus", "year": 2025, "type": "capucine",
+      "chassis": "renault-master", "engine": { "power_ch": 150, "fuel": "diesel", "gearbox": "manuelle" },
+      "dimensions": { "length_cm": 699, "width_cm": 230 },
+      "weights": { "ptac_kg": 3500 },
+      "seats": { "travel": 6 },
+      "beds": [{ "type": "capucine", "count": 2 }, { "type": "superposes", "count": 2 }, { "type": "dinette", "count": 2 }],
+      "layout": "Capucine familiale",
+      "equipment": {
+        "heating": { "energy": "gaz", "system": "combi", "model": "Truma Combi 6" },
+        "fridge": { "type": "absorption" },
+        "hot_water": { "present": true, "source": "combi" }
+      },
+      "price_new_eur": 58000, "specs_source_url": "https://www.ahorn-camp.de", "price_source_url": "https://www.ahorn-camp.de"
+    },
+    {
+      "id": "hobby-de-luxe-460-ufe-2025", "brand": "hobby", "range": "De Luxe", "model": "460 UFe", "year": 2025, "type": "caravane",
+      "dimensions": { "length_cm": 699, "width_cm": 230, "height_cm": 257 },
+      "weights": { "ptac_kg": 1500, "empty_kg": 1250, "payload_kg": 250 },
+      "beds": [{ "type": "francais", "count": 2 }, { "type": "dinette", "count": 2 }],
+      "layout": "Lit à la française avant, salon arrière",
+      "tanks": { "fresh_l": 25, "grey_l": "na" },
+      "equipment": {
+        "heating": { "energy": "gaz", "system": "convecteur", "model": "Truma S 3004" },
+        "fridge": { "type": "absorption", "volume_l": 142, "freezer": true },
+        "hot_water": { "present": true, "source": "boiler", "volume_l": 14 },
+        "roof": { "skylights": 2, "panoramic": false }
+      },
+      "price_new_eur": 26000, "specs_source_url": "https://www.hobby-caravan.de", "price_source_url": "https://www.hobby-caravan.de"
+    },
+    {
+      "id": "adria-altea-552-pk-2025", "brand": "adria", "range": "Altea", "model": "552 PK", "year": 2025, "type": "caravane",
+      "dimensions": { "length_cm": 752, "width_cm": 230 },
+      "weights": { "ptac_kg": 1500 },
+      "beds": [{ "type": "francais", "count": 2 }, { "type": "superposes", "count": 3 }, { "type": "dinette", "count": 1 }],
+      "layout": "Lit avant, lits superposés enfants arrière",
+      "equipment": {
+        "heating": { "energy": "gaz", "system": "convecteur" },
+        "fridge": { "type": "absorption" },
+        "hot_water": { "present": true, "source": "boiler" }
+      },
+      "price_new_eur": 25000, "specs_source_url": "https://www.adria-mobil.com", "price_source_url": "https://www.adria-mobil.com"
+    },
+    {
+      "id": "knaus-sport-500-kd-2025", "brand": "knaus", "range": "Sport", "model": "500 KD", "year": 2025, "type": "caravane",
+      "dimensions": { "length_cm": 727, "width_cm": 232 },
+      "weights": { "ptac_kg": 1500 },
+      "beds": [{ "type": "francais", "count": 2 }, { "type": "superposes", "count": 3 }],
+      "layout": "Lits superposés enfants",
+      "equipment": {
+        "heating": { "energy": "gaz", "system": "convecteur" },
+        "fridge": { "type": "absorption" },
+        "hot_water": { "present": true, "source": "boiler" }
+      },
+      "price_new_eur": 24000, "specs_source_url": "https://www.knaus.com", "price_source_url": "https://www.knaus.com"
+    },
+    {
+      "id": "fendt-bianco-selection-515-sg-2025", "brand": "fendt", "range": "Bianco Selection", "model": "515 SG", "year": 2025, "type": "caravane",
+      "dimensions": { "length_cm": 744, "width_cm": 250 },
+      "weights": { "ptac_kg": 1800 },
+      "beds": [{ "type": "jumeaux", "count": 2 }, { "type": "dinette", "count": 2 }],
+      "layout": "Lits jumeaux arrière",
+      "equipment": {
+        "heating": { "energy": "gaz", "system": "air", "model": "Truma S 5004" },
+        "fridge": { "type": "absorption" },
+        "hot_water": { "present": true, "source": "boiler" }
+      },
+      "price_new_eur": 33000, "specs_source_url": "https://www.fendt-caravan.com", "price_source_url": "https://www.fendt-caravan.com"
+    },
+    {
+      "id": "eriba-touring-542-2025", "brand": "eriba", "range": "Touring", "model": "542", "year": 2025, "type": "caravane",
+      "dimensions": { "length_cm": 557, "width_cm": 205 },
+      "weights": { "ptac_kg": 1000 },
+      "beds": [{ "type": "dinette", "count": 2 }, { "type": "banquette", "count": 1 }],
+      "layout": "Caravane compacte à toit relevable",
+      "equipment": {
+        "heating": { "energy": "gaz", "system": "convecteur" },
+        "fridge": { "type": "absorption" },
+        "hot_water": { "present": false },
+        "roof": { "panoramic": false }
+      },
+      "price_new_eur": 30000, "specs_source_url": "https://www.eriba.com", "price_source_url": "https://www.eriba.com"
+    },
+    {
+      "id": "caravelair-antares-486-2025", "brand": "caravelair", "range": "Antarès", "model": "486", "year": 2025, "type": "caravane",
+      "dimensions": { "length_cm": 685, "width_cm": 225 },
+      "weights": { "ptac_kg": 1300 },
+      "beds": [{ "type": "francais", "count": 2 }, { "type": "superposes", "count": 2 }, { "type": "dinette", "count": 1 }],
+      "layout": "Lits superposés arrière",
+      "equipment": {
+        "heating": { "energy": "gaz", "system": "convecteur" },
+        "fridge": { "type": "absorption" },
+        "hot_water": { "present": false }
+      },
+      "price_new_eur": 19000, "specs_source_url": "https://www.caravelair.com", "price_source_url": "https://www.caravelair.com"
+    },
+    {
+      "id": "tabbert-puccini-550-e-2025", "brand": "tabbert", "range": "Puccini", "model": "550 E", "year": 2025, "type": "caravane",
+      "dimensions": { "length_cm": 790, "width_cm": 250 },
+      "weights": { "ptac_kg": 2000 },
+      "beds": [{ "type": "jumeaux", "count": 2 }, { "type": "dinette", "count": 2 }],
+      "layout": "Lits jumeaux arrière",
+      "equipment": {
+        "heating": { "energy": "gaz_electrique", "system": "eau", "model": "Alde (chauffage central)" },
+        "fridge": { "type": "absorption", "freezer": true },
+        "hot_water": { "present": true, "source": "combi" }
+      },
+      "price_new_eur": 42000, "specs_source_url": "https://www.tabbert.com", "price_source_url": "https://www.tabbert.com"
+    }
+  ]
+}

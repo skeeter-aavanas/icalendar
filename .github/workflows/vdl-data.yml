@@ -1,0 +1,41 @@
+name: VDL – mise à jour des données
+
+on:
+  workflow_dispatch:
+    inputs:
+      brand:
+        description: "Marque à collecter (vide = toutes)"
+        required: false
+  schedule:
+    - cron: "17 3 1 * *" # le 1er de chaque mois
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: vdl/scripts
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm ci || npm install
+      - run: npm test
+      - name: Collecte
+        run: node scrape.js ${{ github.event.inputs.brand && format('--brand {0}', github.event.inputs.brand) || '' }}
+        continue-on-error: true
+      - run: node build-data.js --strict
+      - uses: peter-evans/create-pull-request@v6
+        with:
+          branch: vdl/data-update
+          title: "VDL : mise à jour des données constructeurs"
+          commit-message: "VDL : mise à jour des données collectées"
+          body: "Données collectées automatiquement par `vdl/scripts/scrape.js`. Vérifier le rapport du job avant de fusionner."
+          add-paths: |
+            vdl/scripts/scraped/**
+            vdl/data/models.json

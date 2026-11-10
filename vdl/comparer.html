@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Comparateur VDL</title>
+  <link rel="stylesheet" href="assets/app.css">
+</head>
+<body>
+  <header class="site"></header>
+  <main class="wrap">
+    <h1>Comparateur</h1>
+    <p class="note">Comparez jusqu'à 4 véhicules côte à côte. Les lignes où les véhicules diffèrent sont surlignées, et la meilleure valeur chiffrée est mise en évidence.</p>
+    <div class="cmp-tools card" style="padding:12px">
+      <div style="flex:1;min-width:220px"><label for="add">Ajouter un véhicule</label><select id="add"></select></div>
+      <div style="width:120px"><label for="c-age">Âge (ans)</label><input id="c-age" type="number" min="0" max="25" value="3"></div>
+      <div style="width:140px"><label for="c-km">Kilométrage</label><input id="c-km" type="number" min="0" step="5000" value="30000"></div>
+      <label style="align-self:end"><input type="checkbox" id="only-diff"> Uniquement les différences</label>
+      <button type="button" id="share" style="align-self:end">Copier le lien</button>
+    </div>
+    <div id="out" style="margin-top:14px"></div>
+    <div class="legend"><span class="l-diff">Valeurs différentes</span><span class="l-best">Meilleure valeur</span></div>
+  </main>
+  <footer class="site"></footer>
+  <script type="module" src="assets/compare.js"></script>
+</body>
+</html>

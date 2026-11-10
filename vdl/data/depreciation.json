@@ -1,0 +1,26 @@
+{
+  "_comment": "Paramètres de l'estimation d'occasion. retention[n] = part du prix neuf conservée après n années. Au-delà de la courbe : -annual_after par an, sans descendre sous floor. Valeurs indicatives, à recalibrer.",
+  "price_inflation": 0.04,
+  "uncertainty": 0.08,
+  "curves": {
+    "van":      { "retention": [1, 0.88, 0.82, 0.77, 0.73, 0.69, 0.65, 0.62, 0.59, 0.56, 0.53], "annual_after": 0.025, "floor": 0.22 },
+    "fourgon":  { "retention": [1, 0.86, 0.80, 0.75, 0.70, 0.66, 0.62, 0.59, 0.56, 0.53, 0.50], "annual_after": 0.025, "floor": 0.20 },
+    "profile":  { "retention": [1, 0.83, 0.76, 0.70, 0.65, 0.61, 0.57, 0.53, 0.50, 0.47, 0.44], "annual_after": 0.025, "floor": 0.15 },
+    "capucine": { "retention": [1, 0.82, 0.75, 0.69, 0.64, 0.60, 0.56, 0.52, 0.49, 0.46, 0.43], "annual_after": 0.025, "floor": 0.15 },
+    "integral": { "retention": [1, 0.80, 0.73, 0.67, 0.62, 0.58, 0.54, 0.50, 0.47, 0.44, 0.41], "annual_after": 0.025, "floor": 0.15 },
+    "caravane": { "retention": [1, 0.80, 0.72, 0.66, 0.61, 0.57, 0.53, 0.49, 0.46, 0.43, 0.40], "annual_after": 0.03,  "floor": 0.10 }
+  },
+  "mileage": {
+    "expected_km_per_year": 10000,
+    "penalty_per_1000km_over": 0.004,
+    "bonus_per_1000km_under": 0.002,
+    "max_penalty": 0.15,
+    "max_bonus": 0.06
+  },
+  "condition": {
+    "excellent": { "label": "Excellent (comme neuf)", "factor": 1.05 },
+    "bon":       { "label": "Bon état", "factor": 1.0 },
+    "moyen":     { "label": "État moyen (usure visible)", "factor": 0.9 },
+    "travaux":   { "label": "Travaux à prévoir (infiltrations…)", "factor": 0.75 }
+  }
+}

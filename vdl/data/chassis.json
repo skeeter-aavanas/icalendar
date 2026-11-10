@@ -1,0 +1,19 @@
+[
+  { "id": "fiat-ducato", "name": "Fiat Ducato", "maker": "Stellantis" },
+  { "id": "citroen-jumper", "name": "Citroën Jumper", "maker": "Stellantis" },
+  { "id": "peugeot-boxer", "name": "Peugeot Boxer", "maker": "Stellantis" },
+  { "id": "citroen-spacetourer", "name": "Citroën SpaceTourer / Jumpy", "maker": "Stellantis" },
+  { "id": "ford-transit", "name": "Ford Transit", "maker": "Ford" },
+  { "id": "ford-transit-custom", "name": "Ford Transit Custom", "maker": "Ford" },
+  { "id": "mercedes-sprinter", "name": "Mercedes-Benz Sprinter", "maker": "Mercedes-Benz" },
+  { "id": "mercedes-classe-v", "name": "Mercedes-Benz Classe V / Vito", "maker": "Mercedes-Benz" },
+  { "id": "vw-crafter", "name": "Volkswagen Crafter", "maker": "Volkswagen" },
+  { "id": "vw-multivan-t7", "name": "Volkswagen Multivan T7", "maker": "Volkswagen" },
+  { "id": "vw-transporter-t6", "name": "Volkswagen Transporter T6.1", "maker": "Volkswagen" },
+  { "id": "vw-id-buzz", "name": "Volkswagen ID. Buzz", "maker": "Volkswagen" },
+  { "id": "renault-master", "name": "Renault Master", "maker": "Renault" },
+  { "id": "renault-trafic", "name": "Renault Trafic", "maker": "Renault" },
+  { "id": "iveco-daily", "name": "Iveco Daily", "maker": "Iveco" },
+  { "id": "man-tge", "name": "MAN TGE", "maker": "MAN" },
+  { "id": "toyota-proace", "name": "Toyota Proace", "maker": "Toyota" }
+]
